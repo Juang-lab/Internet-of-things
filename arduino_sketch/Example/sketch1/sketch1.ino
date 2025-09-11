@@ -1,23 +1,29 @@
-const int ROJO = 13;
-const int AMARILLO = 12;
-const int VERDE = 11;
-
 void setup() {
-  pinMode(ROJO, OUTPUT);
-  pinMode(AMARILLO, OUTPUT);
-  pinMode(VERDE, OUTPUT);
+Serial.begin(9600);
+Serial.println("Welcome");
+menu(); 
+  
 }
 
 void loop() {
-  digitalWrite(VERDE, HIGH);
-  delay(3000);
-  digitalWrite(VERDE, LOW);
+if (Serial.available () > 0)
+serial.print("");
 
-  digitalWrite(AMARILLO, HIGH);
-  delay(1000);
-  digitalWrite(AMARILLO, LOW);
+  
+}
 
-  digitalWrite(ROJO, HIGH);
-  delay(3000);
-  digitalWrite(ROJO, LOW);
+void menu() {
+Serial.println("Main menu");
+Serial.println("1. Turn on led red");
+Serial.println("2. Turn off led red");
+Serial.println("3. Turn on led yellow");
+Serial.println("4. Turn off led yellow");
+Serial.println("5. Turn on led green");
+Serial.println("6. Turn off led green");
+Serial.println("7. Turn on all");
+Serial.println("8. Turn off all");
+Serial.println("9. Intermitence");
+serial.print("Press any option ");
+
+
 }
