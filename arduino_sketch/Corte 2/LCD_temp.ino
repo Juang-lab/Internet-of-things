@@ -4,7 +4,7 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 const int sensorPin = A0;  
 const int ledPin = 13;       
-const int motorPin = 9; 
+const int motorPin = 10; 
 
 float temperatura = 0;
 
