@@ -1,30 +1,12 @@
-#include <DHT.h>
-
-#define DHTPIN 10
-#define DHTTYPE DHT11
-#define LED_RED 13  
-
-DHT dht(DHTPIN, DHTTYPE);
-float Humidity, Temperature;
-
+# define
 void setup() {
-  pinMode(LED_RED, OUTPUT);
-  dht.begin();
-  Serial.begin(9600);
-  Serial.print("Hello to weather station");
+pinMode(11,OUTPUD);
+Serial.begin(9600);
+Serial.print("Menu");
+Serial.print("[1]. Turn on L1");
+Serial.print("[]. Turn off L1");
+Serial.print("Press only option");
 }
 
-void loop() {
-  Humidity = dht.readHumidity();
-  Temperature = dht.readTemperature();
 
-  Serial.print("Humidity: ");
-  Serial.println(Humidity);
-  Serial.println("%");
 
-  Serial.print("Temperature: ");
-  Serial.println(Temperature);
-  Serial.println("°C");
-
-  delay(2000);
-}
